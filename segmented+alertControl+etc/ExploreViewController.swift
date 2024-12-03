@@ -5,7 +5,7 @@ class ExploreViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     @IBOutlet weak var controlsTableView: UITableView!
     
-    var controlNames = ["Alert Control", "Segmented Control", "Date Picker", "Switch Control", "Slider"]
+    var controlNames = ["Alert Control", "Segmented Control", "Date Picker", "Progress View", "Slider"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,10 +63,12 @@ class ExploreViewController: UIViewController, UITableViewDelegate, UITableViewD
         case "Segmented Control":
             viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SegmentedViewController")
             
-        case "Switch Control":
-            viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SwitchViewController")
+        case "Progress View":
+            viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ProgressViewController")
+            
         case "Slider":
             viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SliderViewController")
+            
         case "Date Picker":
             viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "DatePickerViewController")
         default :

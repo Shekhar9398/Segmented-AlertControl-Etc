@@ -56,8 +56,32 @@
                     <view key="view" contentMode="scaleToFill" id="NEP-2x-jGz">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YqC-Qp-1Om">
+                                <rect key="frame" x="156.66666666666666" y="421" width="80" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="LnB-wz-Raq"/>
+                                    <constraint firstAttribute="height" constant="35" id="o5j-XO-iMT"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="onAlert">
+                                    <backgroundConfiguration key="background" cornerRadius="12">
+                                        <color key="backgroundColor" systemColor="systemMintColor"/>
+                                        <color key="strokeColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </backgroundConfiguration>
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="alertButton:" destination="O44-9S-o7y" eventType="touchUpInside" id="GsY-8b-5i7"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="gcw-G1-RCg"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="YqC-Qp-1Om" firstAttribute="centerX" secondItem="gcw-G1-RCg" secondAttribute="centerX" id="CpO-kr-gs2"/>
+                            <constraint firstItem="YqC-Qp-1Om" firstAttribute="centerY" secondItem="gcw-G1-RCg" secondAttribute="centerY" id="nLO-vl-n0m"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DcB-ex-et2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -71,28 +95,64 @@
                     <view key="view" contentMode="scaleToFill" id="Pxh-mq-uXC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bordered" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Yme-ZK-ADK">
+                                <rect key="frame" x="131" y="423" width="131" height="32"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                                <connections>
+                                    <action selector="selectSegment:" destination="28C-cL-T5A" eventType="valueChanged" id="I8n-Hb-U2B"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="PYs-Oc-D39"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Yme-ZK-ADK" firstAttribute="centerX" secondItem="PYs-Oc-D39" secondAttribute="centerX" id="Jko-Ck-vxK"/>
+                            <constraint firstItem="Yme-ZK-ADK" firstAttribute="centerY" secondItem="PYs-Oc-D39" secondAttribute="centerY" id="o6c-Qu-j5I"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="segmentedControl" destination="Yme-ZK-ADK" id="rOA-Xe-u9z"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ppe-WM-aPw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-317" y="625"/>
         </scene>
-        <!--Switch View Controller-->
+        <!--Progress View Controller-->
         <scene sceneID="T4J-qw-J4b">
             <objects>
-                <viewController storyboardIdentifier="SwitchViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2If-6H-nIS" customClass="SwitchViewController" customModule="segmented_alertControl_etc" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProgressViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2If-6H-nIS" customClass="ProgressViewController" customModule="segmented_alertControl_etc" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ixg-19-IUL">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="V5P-3n-Mbg">
+                                <rect key="frame" x="96.666666666666686" y="434.66666666666669" width="200" height="8"/>
+                                <color key="tintColor" systemColor="systemGreenColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="8" id="9sa-x5-KbF"/>
+                                    <constraint firstAttribute="width" constant="200" id="ok3-Ng-rcX"/>
+                                </constraints>
+                            </progressView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="gxP-5y-Yw8"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="V5P-3n-Mbg" firstAttribute="centerY" secondItem="gxP-5y-Yw8" secondAttribute="centerY" id="ctT-NL-wMY"/>
+                            <constraint firstItem="V5P-3n-Mbg" firstAttribute="centerX" secondItem="gxP-5y-Yw8" secondAttribute="centerX" id="yLr-hJ-BMy"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="progressBar" destination="V5P-3n-Mbg" id="zB4-Lo-C7c"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5hq-Mv-XQs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="471" y="625"/>
+            <point key="canvasLocation" x="470.9923664122137" y="624.64788732394368"/>
         </scene>
         <!--Date Picker View Controller-->
         <scene sceneID="DLx-zV-Uvm">
@@ -101,13 +161,32 @@
                     <view key="view" contentMode="scaleToFill" id="JPC-MQ-XwB">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="jOA-ZI-zcg">
+                                <rect key="frame" x="46.666666666666657" y="418.66666666666669" width="300" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="EAX-jL-hm4"/>
+                                    <constraint firstAttribute="width" constant="300" id="FoI-GP-JeO"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="datePickerAction:" destination="SRG-fi-l0h" eventType="valueChanged" id="iLz-fO-Nnl"/>
+                                </connections>
+                            </datePicker>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="NKV-7x-gLd"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="jOA-ZI-zcg" firstAttribute="centerY" secondItem="NKV-7x-gLd" secondAttribute="centerY" id="hWc-RB-YpY"/>
+                            <constraint firstItem="jOA-ZI-zcg" firstAttribute="centerX" secondItem="NKV-7x-gLd" secondAttribute="centerX" id="keS-Bg-McY"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="datePickerOutlet" destination="jOA-ZI-zcg" id="KI1-SP-EhR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BpJ-nC-URC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1253" y="625"/>
+            <point key="canvasLocation" x="1251.145038167939" y="624.64788732394368"/>
         </scene>
         <!--Slider View Controller-->
         <scene sceneID="wEK-u0-6uY">
@@ -146,6 +225,12 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemMintColor">
+            <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

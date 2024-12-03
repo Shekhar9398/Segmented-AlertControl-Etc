@@ -15,7 +15,7 @@
 		84602BFF2CFEDFF9007C1E12 /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84602BFE2CFEDFF9007C1E12 /* AlertViewController.swift */; };
 		84602C012CFEE096007C1E12 /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84602C002CFEE096007C1E12 /* ExploreViewController.swift */; };
 		84602C032CFEE90F007C1E12 /* SegmentedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84602C022CFEE90F007C1E12 /* SegmentedViewController.swift */; };
-		84602C052CFEE927007C1E12 /* SwitchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84602C042CFEE927007C1E12 /* SwitchViewController.swift */; };
+		84602C052CFEE927007C1E12 /* ProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84602C042CFEE927007C1E12 /* ProgressViewController.swift */; };
 		84602C072CFEE93D007C1E12 /* SliderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84602C062CFEE93D007C1E12 /* SliderViewController.swift */; };
 		84602C092CFEE970007C1E12 /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84602C082CFEE970007C1E12 /* DatePickerViewController.swift */; };
 /* End PBXBuildFile section */
@@ -31,7 +31,7 @@
 		84602BFE2CFEDFF9007C1E12 /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
 		84602C002CFEE096007C1E12 /* ExploreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
 		84602C022CFEE90F007C1E12 /* SegmentedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedViewController.swift; sourceTree = "<group>"; };
-		84602C042CFEE927007C1E12 /* SwitchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchViewController.swift; sourceTree = "<group>"; };
+		84602C042CFEE927007C1E12 /* ProgressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewController.swift; sourceTree = "<group>"; };
 		84602C062CFEE93D007C1E12 /* SliderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderViewController.swift; sourceTree = "<group>"; };
 		84602C082CFEE970007C1E12 /* DatePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -91,7 +91,7 @@
 			children = (
 				84602BFE2CFEDFF9007C1E12 /* AlertViewController.swift */,
 				84602C022CFEE90F007C1E12 /* SegmentedViewController.swift */,
-				84602C042CFEE927007C1E12 /* SwitchViewController.swift */,
+				84602C042CFEE927007C1E12 /* ProgressViewController.swift */,
 				84602C062CFEE93D007C1E12 /* SliderViewController.swift */,
 				84602C082CFEE970007C1E12 /* DatePickerViewController.swift */,
 			);
@@ -169,7 +169,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84602C052CFEE927007C1E12 /* SwitchViewController.swift in Sources */,
+				84602C052CFEE927007C1E12 /* ProgressViewController.swift in Sources */,
 				84602C072CFEE93D007C1E12 /* SliderViewController.swift in Sources */,
 				84602C012CFEE096007C1E12 /* ExploreViewController.swift in Sources */,
 				84602BE92CFEDF93007C1E12 /* AppDelegate.swift in Sources */,
