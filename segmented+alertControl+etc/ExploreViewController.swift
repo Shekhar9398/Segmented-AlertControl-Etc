@@ -1,12 +1,18 @@
 
 import UIKit
 
+enum Controls : String, CaseIterable {
+    case alertCtrl = "Alert Control"
+    case segmentedCtrl = "Segmented Control"
+    case datePickerView = "Date Picker"
+    case progressView = "Progress View"
+    case slider = "Slider"
+}
+
 class ExploreViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var controlsTableView: UITableView!
-    
-    var controlNames = ["Alert Control", "Segmented Control", "Date Picker", "Progress View", "Slider"]
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -24,13 +30,13 @@ class ExploreViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return controlNames.count
+        return Controls.allCases.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = controlsTableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) 
         
-        cell.textLabel?.text = controlNames[indexPath.row]
+        cell.textLabel?.text = "\(Controls.allCases[indexPath.row].rawValue)"
         cell.textLabel?.font = UIFont(name: "futura", size: 22)
         
         if indexPath.row % 2 == 0 {
@@ -53,26 +59,24 @@ class ExploreViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let row = controlNames[indexPath.row]
+        let row = Controls.allCases[indexPath.row]
         var viewController : UIViewController?
         
         switch row {
-        case "Alert Control":
+        case .alertCtrl:
             viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "AlertViewController")
             
-        case "Segmented Control":
+        case .segmentedCtrl:
             viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SegmentedViewController")
             
-        case "Progress View":
+        case .progressView:
             viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ProgressViewController")
             
-        case "Slider":
+        case .slider:
             viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SliderViewController")
             
-        case "Date Picker":
+        case .datePickerView:
             viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "DatePickerViewController")
-        default :
-            break
         }
         
         navigationController?.pushViewController(viewController!, animated: true)
